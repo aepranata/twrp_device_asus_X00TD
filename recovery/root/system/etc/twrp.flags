@@ -5,10 +5,10 @@
 /recovery       emmc    /dev/block/bootdevice/by-name/recovery                                                      flags=backup=1
 
 # Cache
-/cache          ext4    /dev/block/bootdevice/by-name/cache
+/cache          ext4    /dev/block/bootdevice/by-name/cache                                                         flags=fsflags="discard"
 
 # Data
-/data           ext4    /dev/block/bootdevice/by-name/userdata
+/data           ext4    /dev/block/bootdevice/by-name/userdata                                                      flags=fsflags="discard"
 
 # EFS
 /efs1           emmc    /dev/block/bootdevice/by-name/modemst1                                                      flags=backup=1;display="EFS"
@@ -30,7 +30,7 @@
 /usb_otg        auto    /dev/block/sda1                             /dev/block/sda                                  flags=display="USB OTG";removable;storage;wipeingui
 
 # System
-/system_root    ext4    /dev/block/bootdevice/by-name/system                                                        flags=display="System";wipeingui
+/system_root    ext4    /dev/block/bootdevice/by-name/system                                                        flags=display="System";fsflags="discard";wipeingui
 /system_image   emmc    /dev/block/bootdevice/by-name/system                                                        flags=display="System";backup=1;flashimg=1
-/vendor         ext4    /dev/block/bootdevice/by-name/vendor                                                        flags=display="Vendor";wipeingui
+/vendor         ext4    /dev/block/bootdevice/by-name/vendor                                                        flags=display="Vendor";fsflags="discard";wipeingui
 /vendor_image   ext4    /dev/block/bootdevice/by-name/vendor                                                        flags=display="Vendor";backup=1;flashimg=1
