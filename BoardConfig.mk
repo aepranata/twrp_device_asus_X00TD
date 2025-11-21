@@ -33,7 +33,6 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x37
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3
@@ -41,18 +40,25 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=c0c4000.sdhci
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += loop.max_part=7
+
+# Kerne - console
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000
+
+# Kernel - SELinux
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+# Kwrnel - offset
+BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_RAMDISK_OFFSET := 0x01000000
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+
+# Kernel - source
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CONFIG := X00TD_defconfig
 TARGET_KERNEL_SOURCE := kernel/asus/X00TD
+TARGET_KERNEL_CONFIG := X00TD_defconfig
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
