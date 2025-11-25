@@ -38,3 +38,9 @@ BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000
 
 # Kernel - SELinux
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+# Kernel - offset
+BOARD_KERNEL_BASE  := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_MKBOOTIMG_ARGS  += --ramdisk_offset 0x01000000
+BOARD_MKBOOTIMG_ARGS  += --tags_offset 0x00000100
