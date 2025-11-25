@@ -89,6 +89,11 @@ TW_FRAMERATE := 60
 TW_OVERRIDE_SYSTEM_PROPS := \
     "ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
 
+# TWRP - Crypto
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+
 # TWRP - Debug
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
