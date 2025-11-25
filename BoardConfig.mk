@@ -34,19 +34,15 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE += user_debug=31
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x37
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
-BOARD_KERNEL_CMDLINE += androidboot.boot_devices=c0c4000.sdhci
+BOARD_KERNEL_CMDLINE += sched_enable_hmp=1
+BOARD_KERNEL_CMDLINE += sched_enable_power_aware=1
+BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
-BOARD_KERNEL_CMDLINE += loop.max_part=7
-
-# Kernel - console
-BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8
-BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
-BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000
-
-# Kernel - SELinux
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Kernel - offset
