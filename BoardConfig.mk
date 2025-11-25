@@ -22,6 +22,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Build
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x37
