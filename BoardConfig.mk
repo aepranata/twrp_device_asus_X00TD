@@ -21,3 +21,15 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
+
+# Kernel
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x37
+BOARD_KERNEL_CMDLINE += ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=c0c4000.sdhci
+BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000
+BOARD_KERNEL_CMDLINE += androidboot.configfs=true
+BOARD_KERNEL_CMDLINE += loop.max_part=7
