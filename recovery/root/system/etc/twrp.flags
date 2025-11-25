@@ -9,6 +9,7 @@
 
 # Data
 /data           ext4    /dev/block/bootdevice/by-name/userdata                                                      flags=fsflags="discard"
+/metadata       ext4    /dev/block/bootdevice/by-name/logdump                                                       flags=display="Metadata";fsflags="discard"
 
 # EFS
 /efs1           emmc    /dev/block/bootdevice/by-name/modemst1                                                      flags=backup=1;display="EFS"
