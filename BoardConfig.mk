@@ -44,6 +44,7 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci
 
 # Kernel - offset
 BOARD_KERNEL_BASE  := 0x00000000
