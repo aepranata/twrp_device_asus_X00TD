@@ -65,6 +65,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS ?= 255
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_THEME := portrait_hdpi
+TW_INCLUDE_RESETPROP := true
 
 # TWRP - Debug
 TARGET_USES_LOGD := true
