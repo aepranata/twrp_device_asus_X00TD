@@ -59,11 +59,10 @@ TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # TWRP
+TW_THEME := portrait_hdpi
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_MAX_BRIGHTNESS ?= 255
-TW_THEME := portrait_hdpi
 TW_INCLUDE_RESETPROP := true
 
 # TWRP - Debug
