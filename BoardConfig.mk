@@ -35,3 +35,6 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000
+
+# Kernel - SELinux
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
